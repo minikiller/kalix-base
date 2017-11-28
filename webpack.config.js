@@ -38,11 +38,20 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {
+        test: /\.toml$/,
+        loader: 'toml-loader'
       }
     ]
   },
   externals: {
-    vue: 'vue'
+    vue: 'vue',
+    'element-ui': 'element-ui'
   },
   resolve: {
     alias: {

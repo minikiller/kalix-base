@@ -25,7 +25,7 @@
     v-bind:total="pager.totalCount")
 </template>
 <script type="text/ecmascript-6">
-  import {PageConfig} from 'config/global.toml'
+  import {PageConfig} from '../config/global.toml'
 
   const MAX_TABLE_HEIGHT = 350
   export default {
