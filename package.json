@@ -1,7 +1,7 @@
 {
   "name": "kalix-base",
   "description": "kalix base component",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "author": "minikiller <minikiller@qq.com>",
   "license": "MIT",
   "private": false,
