@@ -70,14 +70,14 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {PageConfig, SecurityBtnUrl} from 'config/global.toml'
+  import {PageConfig, SecurityBtnUrl} from '../config/global.toml'
   import TableTool from './baseTableTool'
   import ToolBar from './baseToolBar'
   import Dialog from './baseDialog'
-  import Message from 'common/message'
-  import EventBus from 'common/eventbus'
-  import Cache from 'common/cache'
-  import {DictKeyValueObject} from 'common/keyValueObject'
+  import Message from '../common/message'
+  import EventBus from '../common/eventbus'
+  import Cache from '../common/cache'
+  import {DictKeyValueObject} from '../common/keyValueObject'
   import {
     ON_SEARCH_BUTTON_CLICK,
     ON_REFRESH_DATA
@@ -515,5 +515,5 @@
 </script>
 
 <style scoped lang="stylus" type="text/stylus">
-  @import "~@/assets/stylus/baseTable"
+  @import "../assets/stylus/baseTable"
 </style>

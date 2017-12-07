@@ -34,13 +34,13 @@
 </template>
 
 <script>
-  import {strToUnicode} from 'common/unicode-convert'
-  import {isEmptyObject} from 'common/util'
-  import EventBus from 'common/eventbus'
+  import {strToUnicode} from '../common/unicode-convert'
+  import Util from '../common/util'
+  import EventBus from '../common/eventbus'
   import {ON_SEARCH_BUTTON_CLICK} from './event.toml'
-  import QueryDatepicker from 'components/biz/date/datepicker'
-  import QueryDatetimepicker from 'components/biz/date/datetimepicker'
-  import BaseDictSelect from '@/components/custom/baseDictSelect'
+  import QueryDatepicker from './biz/date/datepicker'
+  import QueryDatetimepicker from './biz/date/datetimepicker'
+  import BaseDictSelect from './baseDictSelect'
 
   export default {
     activated() {
@@ -93,7 +93,7 @@
         this.isSearchFrom = false
         this.formDataType = {}
         this.formDataField = {}
-        if (!isEmptyObject(this.searchForm)) {  // 是否传入 searchForm
+        if (!Util.isEmptyObject(this.searchForm)) {  // 是否传入 searchForm
           this.form = this.searchForm
           this.isSearchFrom = true
         } else {
@@ -215,8 +215,8 @@
 </script>
 
 <style lang='stylus' type='text/stylus'>
-  @import "~@/assets/stylus/color.styl"
-  @import "~@/assets/stylus/kalix-color.styl"
+  @import "../assets/stylus/color.styl"
+  @import "../assets/stylus/kalix-color.styl"
   .kalix-search
     margin 10px
     background-color $background-color-1

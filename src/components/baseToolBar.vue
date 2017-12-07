@@ -14,8 +14,8 @@
 
 <script type="text/ecmascript-6">
   import {ON_TOOLBAR_CLICK} from './event.toml'
-  import {GlobalToolBarButtonList} from 'config/global.toml'
-  import {concatArrayObject, getNewObject} from 'common/util.js'
+  import {GlobalToolBarButtonList} from '../config/global.toml'
+  import Util from '../common/util.js'
 
   export default {
     props: {
@@ -31,8 +31,8 @@
     },
     methods: {
       initToolBtnList() {
-        let defaultToolBarBtnList = getNewObject(GlobalToolBarButtonList)
-        this.defaultBtnList = concatArrayObject(this.toolbarBtnList, defaultToolBarBtnList)
+        let defaultToolBarBtnList = Util.getNewObject(GlobalToolBarButtonList)
+        this.defaultBtnList = Util.concatArrayObject(this.toolbarBtnList, defaultToolBarBtnList)
       },
       toggle(btnId) {
         this.$emit(ON_TOOLBAR_CLICK, btnId)

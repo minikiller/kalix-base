@@ -15,7 +15,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Cache from 'common/cache'
+  import Cache from '../common/cache'
 
   export default {
     props: {

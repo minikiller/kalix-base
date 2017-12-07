@@ -6,8 +6,8 @@
     v-bind:value="item[id]")
 </template>
 <script type="text/ecmascript-6">
-  import Cache from 'common/cache'
-  import Message from 'common/message'
+  import Cache from 'src/common/cache'
+  import Message from 'src/common/message'
 
   export default {
     props: {

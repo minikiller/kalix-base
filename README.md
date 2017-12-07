@@ -23,3 +23,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ## config
 
 npm config set registry http://registry.npmjs.org
+
+## npm link
+生成符合连接文件
+```
+added 179 packages, removed 36 packages and updated 675 packages in 148.689s
+C:\Users\Administrator\AppData\Roaming\npm\node_modules\kalix-base -> D:\java-develop\project\kalix-base
+```

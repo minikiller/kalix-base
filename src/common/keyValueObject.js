@@ -1,5 +1,5 @@
-import Cache from 'common/cache'
-import {isEmptyObject} from 'common/util'
+import Cache from './cache'
+import Util from './util'
 
 /***
  * 描述：获取 对应 _DictKey 的键值对对象
@@ -29,7 +29,7 @@ export function KeyValueObject(_objects, _value, _label) {
   _objects.forEach(function (e) {
     _keyObj[e[_value]] = e[_label]
   })
-  return !isEmptyObject(_keyObj) ? _keyObj : null
+  return !Util.isEmptyObject(_keyObj) ? _keyObj : null
 }
 /***
  * 描述：获取 对应 _DictKey 的键值对对象

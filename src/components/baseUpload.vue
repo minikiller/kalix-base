@@ -28,8 +28,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {baseURL, uploadURL, couchdbDelURL} from 'config/global.toml'
-  import Cache from 'common/cache.js'
+  import {baseURL, uploadURL, couchdbDelURL} from '../config/global.toml'
+  import Cache from '../common/cache.js'
   import Vue from 'vue'
 
   let fileCount = 0
