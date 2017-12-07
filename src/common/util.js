@@ -58,7 +58,7 @@ export default {
    * @returns {*} 合并后的对象
    */
   concatObject(newObj, oldObj) {
-    if (!isEmptyObject(newObj)) {
+    if (!this.isEmptyObject(newObj)) {
       oldObj = Object.assign(newObj, oldObj)
     }
     return oldObj

@@ -23,7 +23,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to My Kalix Vue.js App'
+      msg: 'Welcome to My Kalix12345678 Vue.js App'
     }
   }
 }

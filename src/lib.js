@@ -42,7 +42,7 @@ const KalixDialog = {
 
 const KalixApp = {
   install(Vue, params = {}) {
-    Vue.component('KalixApp', pagedTable)
+    Vue.component('KalixApp', PagedTable)
   }
 }
 
