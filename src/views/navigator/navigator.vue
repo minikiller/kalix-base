@@ -36,7 +36,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Vue from 'vue'
   import Cache from '@/common/cache'
   import EventBus from '@/common/eventbus'
   import {cacheTime, systemApplicationsBaseURL} from '@/config/global.toml'
@@ -90,6 +89,7 @@
           this.setItemShow()
         } else {
           const data = {_dc: cd, node: 'root'}
+          let that = this
           this.axios({
             url: systemApplicationsBaseURL + this.currApp,
             method: 'get',
@@ -101,7 +101,7 @@
               this.treeData = response.data
               if (this.treeData.length) {
                 this.treeData.forEach(function (e, i) {
-                  Vue.set(e, 'isShow', false)
+                  that.$set(e, 'isShow', false)
                 })
                 treeListData[this.currApp] = this.treeData
                 treeListData.createDate = nowDate.getTime()
@@ -130,6 +130,7 @@
         return e
       },
       showTree(e) {
+        console.log('showTree')
         this.clickedNode = e
         this.treeData.forEach((item) => {
           if (item !== e) {
