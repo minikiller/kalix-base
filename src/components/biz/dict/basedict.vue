@@ -11,10 +11,12 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import BaseTable from '@/components/custom/baseTable'
-  import Vue from 'vue'
-  import {ToolButtonList} from 'config/global.toml'
+  import BaseTable from '@/components/baseTable'
+  import {ToolButtonList} from '@/config/global.toml'
   import {registerComponent} from '@/api/register'
+  import basedictSearch from './basedictSearch'
+  import basedictAdd from './basedictAdd'
+  import basedictView from './basedictView'
 
   export default {
     props: {
@@ -38,9 +40,6 @@
       }
     },
     created() {
-      Vue.component('basedictSearch', require('' + './basedictSearch.vue').default)
-      Vue.component('basedictAdd', require('' + './basedictAdd.vue').default)
-      Vue.component('basedictView', require('' + './basedictView.vue').default)
     },
     methods: {
       regGlobalComponent() {
@@ -49,7 +48,8 @@
       }
     },
     components: {
-      BaseTable
+      BaseTable, basedictSearch, basedictAdd, basedictView
+
 //      KalixUserAdd: UserAdd
     }
   }

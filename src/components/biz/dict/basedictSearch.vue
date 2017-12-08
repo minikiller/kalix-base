@@ -10,7 +10,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import BaseSearch from '@/components/custom/baseSearch.vue'
+  import BaseSearch from '@/components/baseSearch.vue'
 
   export default {
     data() {

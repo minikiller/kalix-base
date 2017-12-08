@@ -18,7 +18,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Dialog from '@/components/custom/baseDialog.vue'
+  import Dialog from '@/components/baseDialog.vue'
   import {FormModel} from './model.toml'
 
   export default {

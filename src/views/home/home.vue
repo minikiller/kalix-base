@@ -20,7 +20,7 @@
   import Welcome from '@/views/welcome'
   import Cache from '@/common/cache'
 
-  const _import = require('@/router/_import_' + process.env.NODE_ENV)
+  // const _import = require('@/router/_import_' + process.env.NODE_ENV)
 
   let content = {
     Welcome
@@ -66,7 +66,8 @@
         let app = this.$route.params.app // 应用名称
         let fun = this.$route.params.fun // 功能名称
         if (fun !== undefined) {
-          this.which_to_show = _import(`${app}/${fun.toLowerCase()}/${fun.toLowerCase()}`)
+          console.log('request component is ', app.toLowerCase() + fun.toLowerCase())
+          this.which_to_show = app.toLowerCase() + fun.toLowerCase()
         } else {
           this.which_to_show = (content[fun]) ? fun : 'Welcome'
         }
