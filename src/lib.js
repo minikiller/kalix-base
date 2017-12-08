@@ -8,6 +8,10 @@ import DatePicker from './components/baseUpload'
 import BaseDictSelect from './components/biz/date/datepicker'
 import BaseUpload from './components/baseDictSelect'
 import BaseQrcode from './components/baseQrcode'
+import Header from './views/header/header'
+import Home from './views/home/home'
+import Login from './views/login/login'
+import Navigator from './views/navigator/navigator'
 import Cache from './common/cache'
 import EventBus from './common/eventbus'
 import Message from './common/message'
@@ -25,6 +29,11 @@ const KalixDefault = {
     Vue.component('KalixQrcode', BaseQrcode)
     Vue.component('KalixDictSelect', BaseDictSelect)
     Vue.component('KalixDatePicker', DatePicker)
+
+    Vue.component('KalixHeader', Header)
+    Vue.component('KalixHome', Home)
+    Vue.component('KalixLogin', Login)
+    Vue.component('KalixNavigator', Navigator)
   }
 }
 
@@ -54,5 +63,5 @@ const KalixHello = {
 
 export {
   KalixDefault as default, KalixApp, KalixHello, KalixPagedTable, KalixDialog,
-  Cache, EventBus, Message, Util
+  Cache, EventBus, Message, Util, Header, Home, Login, Navigator
 }
